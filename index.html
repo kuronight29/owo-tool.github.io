@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Owo Bot Cowoncy Farming Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body.light-theme {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        body.dark-theme {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(51, 51, 51, 0.95);
+            padding: 1rem 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .theme-toggle {
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        #root {
+            padding: 80px 20px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: rgba(255,255,255,0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4a90e2;
+        }
+
+        h2 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: rgba(74, 144, 226, 0.1);
+            border: 1px solid rgba(74, 144, 226, 0.2);
+        }
+
+        .steps-list {
+            list-style-position: inside;
+            padding: 1rem 0;
+        }
+
+        .steps-list li {
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: rgba(74, 144, 226, 0.1);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <div class="navbar">
+        <div>
+            <a href="#welcome">Welcome</a>
+            <a href="#features">Features</a>
+            <a href="#how-to-use">How to Use</a>
+        </div>
+        <div class="theme-toggle">🌓</div>
+    </div>
+    <div id="root">
+        <section id="welcome">
+            <h1>Welcome to the Discord Owo Bot Cowoncy Farming Tool</h1>
+            <p>This tool helps you automate the process of farming Cowoncy in the Owo Bot on Discord.</p>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Automated Farming</h3>
+                    <p>Let the tool handle all the farming while you focus on other tasks</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Easy to Use</h3>
+                    <p>Simple interface and straightforward setup process</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Customizable</h3>
+                    <p>Adjust settings according to your preferences</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-use">
+            <h2>How to Use</h2>
+            <ol class="steps-list">
+                <li>Download and install the tool</li>
+                <li>Configure your settings</li>
+                <li>Start farming Cowoncy!</li>
+            </ol>
+        </section>
+    </div>
+    <script>
+        // To run the code, open this HTML file in a web browser.
+        $(document).ready(function() {
+            console.log("jQuery is ready!");
+
+            // Theme toggle functionality
+            $('.theme-toggle').click(function() {
+                $('body').toggleClass('dark-theme light-theme');
+            });
+        });
+    </script>
+</body>
+</html>

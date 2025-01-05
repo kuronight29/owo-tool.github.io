@@ -1,34 +1,60 @@
+:root {
+    --light-theme-bg: rgba(255, 255, 255, 1);         
+    --light-theme-color: rgba(51, 51, 51, 1);        
+    --dark-theme-bg: rgba(26, 26, 26, 1);            
+    --dark-theme-color: rgba(255, 255, 255, 1);     
+    --text-color: rgba(74, 144, 226, 1);             
+    --navbar-dark: rgba(51, 51, 51, 0.95);
+    --navbar-light: rgba(74, 144, 226, 0.95);
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body.light-theme {
-    background-color: #f0f8ff;  /* Changed to AliceBlue */
-    color: #333;
+    background-color: var(--light-theme-bg);  /* Changed to AliceBlue */
+    color: var(--light-theme-color);
 }
 
 body.dark-theme {
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: var(--dark-theme-bg);
+    color: var(--dark-theme-color)
+}
+.navbar.dark-theme {
+    background-color: var(--navbar-dark);
+}
+.navbar.light-theme {
+    background-color: var(--navbar-light);
+    
 }
 
 .navbar {
     position: fixed;
     width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(51, 51, 51, 0.95);
     padding: 1rem 2rem;
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
 }
-
+.navgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.navbar.dark-theme a  {
+    color: var(--dark-theme-color);
+}
+.navbar.light-theme a {
+    color: var(--light-theme-color);
+    
+}
 .navbar a {
-    color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -59,12 +85,16 @@ body.dark-theme {
     max-width: 1200px;
     margin: 0 auto;
 }
-
+section.light-theme {
+    background-color: color-mix(in srgb, var(--light-theme-color) 10%, transparent);
+}
+section.dark-theme {
+    background-color: color-mix(in srgb, var(--light-theme-color) 50%, transparent);
+}
 section {
     margin: 2rem 0;
     padding: 2rem;
-    border-radius: 10px;
-    background-color: rgba(255,255,255,0.05);
+    border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s;
 }
@@ -72,18 +102,19 @@ section {
 section:hover {
     transform: translateY(-5px);
 }
-
-h1 {
-    font-size: 2.5rem;
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+.title {
     margin-bottom: 1rem;
-    color: #4a90e2;
+    color: var(--text-color);
 }
 
-h2 {
-    color: #4a90e2;
+/*h2 {
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
-
+*/
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -96,6 +127,7 @@ h2 {
     border-radius: 8px;
     background-color: rgba(74, 144, 226, 0.1);
     border: 1px solid rgba(74, 144, 226, 0.2);
+    transition: transform 0.3s;
 }
 
 .feature-card i {
@@ -142,8 +174,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;  /* Dark theme default */
-    color: #fff;  /* Dark theme default */
+    background-color: var(--dark-theme-bg); /* Dark theme default */
+    color: var(--dark-theme-color);  /* Dark theme default */
 }
 
 header {
@@ -195,7 +227,7 @@ li {
 .button:hover {
     background-color: #45a049;
 }
-
+/*
 footer {
     text-align: center;
     padding: 1em 0;
@@ -205,3 +237,4 @@ footer {
     width: 100%;
     bottom: 0;
 }
+*/

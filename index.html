@@ -10,8 +10,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="light-theme">
-    <div class="navbar">
-        <div>
+    <div id="nav" class="navbar light-theme">
+        <div class="navgrid">
             <a href="#welcome"><i class="fas fa-home"></i> Welcome</a>
             <a href="#features"><i class="fas fa-star"></i> Features</a>
             <a href="#how-to-use"><i class="fas fa-book"></i> How to Use</a>
@@ -21,8 +21,8 @@
         </div>
     </div>
     <div id="root">
-        <section id="welcome">
-            <h1>Advanced Discord OwO Farming Tool</h1>
+        <section class="dontdisrtubme light-theme" id="welcome">
+            <h1 class="title">Advanced Discord OwO Farming Tool</h1>
             <p class="welcome-text">
                 An advanced Discord OwO farming tool featuring a wide range of powerful extensions, 
                 meticulously crafted for optimal performance. Our tool provides automated farming 
@@ -35,8 +35,8 @@
             </a>
         </section>
 
-        <section id="features">
-            <h2><i class="fas fa-stars"></i> Features</h2>
+        <section  class="dontdisrtubme light-theme"   id="features">
+            <h2 class="title" ><i class="fas fa-star" ></i> Features</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <i class="fas fa-robot"></i>
@@ -56,8 +56,8 @@
             </div>
         </section>
 
-        <section id="how-to-use">
-            <h2>How to Use</h2>
+        <section  class="dontdisrtubme light-theme"  id="how-to-use">
+            <h2 class="title" >How to Use</h2>
             <ol class="steps-list">
                 <li>Download and install the tool</li>
                 <li>Configure your settings</li>
@@ -68,7 +68,10 @@
     <script>
         $(document).ready(function() {
             $('.theme-toggle').click(function() {
-                $('body').toggleClass('dark-theme light-theme');
+                $('body').toggleClass('dark-theme light-theme'); 
+                 $('#nav').toggleClass('dark-theme light-theme');
+                 $('.dontdisrtubme').toggleClass('dark-theme light-theme');
+                 
                 $('.theme-toggle i').toggleClass('fa-sun fa-moon');
             });
         });

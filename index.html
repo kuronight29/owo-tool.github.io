@@ -1,80 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Owo Bot Cowoncy Farming Tool</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body class="light-theme">
-    <div id="nav" class="navbar light-theme">
-        <div class="navgrid">
-            <a href="#welcome"><i class="fas fa-home"></i> Welcome</a>
-            <a href="#features"><i class="fas fa-star"></i> Features</a>
-            <a href="#how-to-use"><i class="fas fa-book"></i> How to Use</a>
-        </div>
-        <div class="theme-toggle">
-            <i class="fas fa-sun"></i>
-        </div>
-    </div>
-    <div id="root">
-        <section class="dontdisrtubme light-theme" id="welcome">
-            <h1 class="title">Advanced Discord OwO Farming Tool</h1>
-            <p class="welcome-text">
-                An advanced Discord OwO farming tool featuring a wide range of powerful extensions, 
-                meticulously crafted for optimal performance. Our tool provides automated farming 
-                capabilities while maintaining security and efficiency.
-            </p>
-            <a href="https://github.com/Kyou-Izumi/advanced-discord-owo-tool-farm" 
-               target="_blank" 
-               class="github-link">
-               📦 View on GitHub
-            </a>
-        </section>
-
-        <section  class="dontdisrtubme light-theme"   id="features">
-            <h2 class="title" ><i class="fas fa-star" ></i> Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>Automated Farming</h3>
-                    <p>Let the tool handle all the farming while you focus on other tasks</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-magic"></i>
-                    <h3>Easy to Use</h3>
-                    <p>Simple interface and straightforward setup process</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-sliders"></i>
-                    <h3>Customizable</h3>
-                    <p>Adjust settings according to your preferences</p>
-                </div>
-            </div>
-        </section>
-
-        <section  class="dontdisrtubme light-theme"  id="how-to-use">
-            <h2 class="title" >How to Use</h2>
-            <ol class="steps-list">
-                <li>Download and install the tool</li>
-                <li>Configure your settings</li>
-                <li>Start farming Cowoncy!</li>
-            </ol>
-        </section>
-    </div>
-    <script>
-        $(document).ready(function() {
-            $('.theme-toggle').click(function() {
-                $('body').toggleClass('dark-theme light-theme'); 
-                 $('#nav').toggleClass('dark-theme light-theme');
-                 $('.dontdisrtubme').toggleClass('dark-theme light-theme');
-                 
-                $('.theme-toggle i').toggleClass('fa-sun fa-moon');
-            });
-        });
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
